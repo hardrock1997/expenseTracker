@@ -34,10 +34,64 @@
 .btn span {
     color: white;
     display: block;
-
-  
-
+}
+.btn:hover {
+    cursor: pointer;
 }
 span {
     color:#B5DC52
+}
+.modal {
+    width: 538px;
+    height: 338px;
+    background-color:#EFEFEF;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    border-radius: 15px;
+}
+.firstInput {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+/* .secondInput {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+} */
+
+.firstInput input {
+    height: 51px;
+    width: 223px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.addExpense{
+    width: 223px;
+    background-color: #F4BB4A;
+    color: white;
+    text-align: center;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius :15px
+}
+.cancel {
+    width: 112px;
+    background-color: #E3E3E3;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.cancel:hover {
+    cursor: pointer;
+}
+form h2 {
+    margin-bottom: 10px;
 }

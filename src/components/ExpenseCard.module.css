@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .expense {
     display: flex;
@@ -19,7 +20,7 @@
 .btn {
     color: white;
     background-color: #FF9595;
-    width: 108px;
+    width: 158px;
     height: 25px;
     border: 1px solid black;
     display: flex;
@@ -31,10 +32,78 @@
 .btn span {
     color: white;
     display: block;
-
-  
-
+}
+.btn:hover {
+    cursor: pointer;
 }
 .expense span {
     color:#F4BB4A;
+}
+
+.modal {
+    width: 538px;
+    height: 338px;
+    background-color:#EFEFEF;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    border-radius: 15px;
+}
+.firstInput {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.secondInput {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.firstInput input {
+    height: 51px;
+    width: 223px;
+    border-radius: 15px;
+    text-align: center;
+}
+.secondInput input {
+    height: 51px;
+    width: 223px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5px;
+}
+.thirdInput {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.addExpense{
+    width: 223px;
+    background-color: #F4BB4A;
+    color: white;
+    text-align: center;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius :15px
+}
+.cancel {
+    width: 112px;
+    background-color: #E3E3E3;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.cancel:hover {
+    cursor: pointer;
+}
+form h2 {
+    margin-bottom: 10px;
 }
