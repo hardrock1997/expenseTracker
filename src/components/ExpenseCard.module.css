@@ -1,0 +1,40 @@
+.ExpenseCard {
+    width: 356px;
+    height: 181px;
+    border-radius: 15px;
+    background-color: grey;
+    color: white;
+    position: absolute;
+    top: 80px;
+    left: 496px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.expense {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    color: white;
+    background-color: #FF9595;
+    width: 108px;
+    height: 25px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    border-radius:5px ;
+    margin-top: 15px;
+    align-items: center;
+}
+.btn span {
+    color: white;
+    display: block;
+
+  
+
+}
+.expense span {
+    color:#F4BB4A;
+}
