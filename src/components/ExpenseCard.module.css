@@ -92,6 +92,9 @@
     justify-content: center;
     border-radius :15px
 }
+.addExpense:hover {
+    cursor: pointer;
+}
 .cancel {
     width: 112px;
     background-color: #E3E3E3;

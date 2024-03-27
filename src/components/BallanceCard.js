@@ -1,6 +1,6 @@
 import styles from './BalanceCard.module.css';
 import { useContext } from 'react';
-import { balanceAndExpenseContext } from '../context/BalanceAndExpenseContext';
+import { BalanceAndExpenseContext } from '../context/BalanceAndExpenseContext';
 import { useState } from 'react';
 import ReactModal from 'react-modal';
 const modalStyle={
@@ -21,7 +21,7 @@ const modalStyle={
 }
 export default function BalanceCard() {
     const [isModalOpen,setIsModalOpen]=useState(false);
-    const {balance} = useContext(balanceAndExpenseContext);
+    const {balance,expenses,addExpense} = useContext(BalanceAndExpenseContext);
     function openModal() {
         setIsModalOpen(true)
     }
@@ -41,7 +41,7 @@ export default function BalanceCard() {
                     <h2>Add Balance</h2>
                     <div className={styles.firstInput}>
                         <input placeholder='Income amount' type='text'/>
-                        <span className={styles.addExpense}>Add Balance</span>
+                        <span className={styles.addBalance}>Add Balance</span>
                         <span className={styles.cancel} onClick={closeModal}>Cancel</span>
                     </div>
                 </form>

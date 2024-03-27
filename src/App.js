@@ -1,15 +1,18 @@
 import Body from './components/Body';
 import './App.css';
-import { balanceAndExpenseContext } from './context/BalanceAndExpenseContext';
+import {BalanceAndExpenseProvider } from './context/BalanceAndExpenseContext';
 
-const initials={balance:5000,expense:0}
+// const initials={balance:5000,expenses:[],AddedBalance:0}
 
 function App() {
   return (
   <div className="App">
-    <balanceAndExpenseContext.Provider value={initials}>
+    {/* <balanceAndExpenseContext.Provider value={initials}>
       <Body/>
-    </balanceAndExpenseContext.Provider>
+    </balanceAndExpenseContext.Provider> */}
+    <BalanceAndExpenseProvider>
+      <Body/>
+    </BalanceAndExpenseProvider>
   </div>
   );
 }
