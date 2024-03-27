@@ -21,12 +21,17 @@ const modalStyle={
 }
 export default function BalanceCard() {
     const [isModalOpen,setIsModalOpen]=useState(false);
-    const {balance,expenses,addExpense} = useContext(BalanceAndExpenseContext);
+    const [amount,setAmount]=useState(0);
+    const {balance,expenses,addExpense,addBalance} = useContext(BalanceAndExpenseContext);
     function openModal() {
         setIsModalOpen(true)
     }
     function closeModal() {
         setIsModalOpen(false)
+    }
+    function handleAddBalance() {
+        addBalance(amount);
+        setIsModalOpen(false);
     }
     return (
         <div className={styles.balanceCard}>
@@ -40,8 +45,8 @@ export default function BalanceCard() {
                 <form>
                     <h2>Add Balance</h2>
                     <div className={styles.firstInput}>
-                        <input placeholder='Income amount' type='text'/>
-                        <span className={styles.addBalance}>Add Balance</span>
+                        <input placeholder='Income amount' type='text' onChange={(e)=>setAmount(Number(e.target.value))}/>
+                        <span className={styles.addBalance} onClick={handleAddBalance}>Add Balance</span>
                         <span className={styles.cancel} onClick={closeModal}>Cancel</span>
                     </div>
                 </form>

@@ -37,7 +37,7 @@ export default function ExpenseCard() {
         setIsModalOpen(false)
     }
     function handleExpense() {
-        if(priceRef.current+price<=balance) {
+        if(price<=balance) {
             priceRef.current+=price;
         }
         else {
@@ -48,7 +48,7 @@ export default function ExpenseCard() {
     }
     function pushExpenses() {
         addExpense(exp);
-        manageBalance(exp.price);
+        manageBalance(price);
     }
   
     return (
